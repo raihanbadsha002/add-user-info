@@ -10,6 +10,7 @@ interface IProps {
 const AddToList: React.FC<IProps>= ({people, setPeople}) => {
  const [input, setInput] = useState({
      name:"",
+     email: "",
      age:"",
      img:"",
      note: ""
@@ -31,6 +32,7 @@ const AddToList: React.FC<IProps>= ({people, setPeople}) => {
          ...people,
          {
            name: input.name,
+           email: input.email,
            age: parseInt(input.age),
            url: input.img,
            note: input.note  
@@ -38,6 +40,7 @@ const AddToList: React.FC<IProps>= ({people, setPeople}) => {
      ])
      setInput({
         name:"",
+        email:"",
         age:"",
         img:"",
         note: ""
@@ -50,6 +53,9 @@ const AddToList: React.FC<IProps>= ({people, setPeople}) => {
         <div className="row">
             <div className="col-12 mb-3">
                 <input type="text" className="form-control" name="name" value={input.name} placeholder="User Name" onChange={handleChange} aria-label="User Name"/>
+            </div>
+            <div className="col-12 mb-3">
+                <input type="email" className="form-control" name="email" value={input.age} placeholder="Email" onChange={handleChange} aria-label="Email"/>
             </div>
             <div className="col-12 mb-3">
                 <input type="number" className="form-control" name="age" value={input.age} placeholder="Age" onChange={handleChange} aria-label="Age"/>

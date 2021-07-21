@@ -15,6 +15,7 @@ const List: React.FC<IProps> = ({ people }) => {
               <div className="col-md-8">
                 <div className="card-body">
                   <h5 className="card-title">{person.name}</h5>
+                  <h6 className="card-text">{person.email}</h6>
                   <p className="card-text">{person.age} years old</p>
                   <p className="card-text">{person.note}</p>
                 </div>

@@ -7,6 +7,7 @@ import List from './components/List';
 export interface IState {
   people: {
     name: string
+    email: string;
     age: number
     url: string
     note?: string
@@ -17,6 +18,7 @@ function App() {
   const [people, setPeople] = useState<IState["people"]>([
    {
      name: "Jackson Levi",
+     email: "jackson453@gmail.com",
      url: "https://www.mantruckandbus.com/fileadmin/_processed_/8/3/csm_man-sebastian-voell_cffd1f64ae.jpg",
      age: 45,
      note: "I am Programmer,I have no life."
